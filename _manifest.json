@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "id": "com.omsociety.zlibrary-assistant",
+  "version": "1.0.0",
+  "name": "Zlibrary 助手",
+  "description": "为 MaiBot（麦麦）提供 Z-Library 图书搜索与下载能力：账号池轮换、HTML 封面卡片、下载额度管控与 SSRF 防护。移植自 AstrBot 插件 astrbot_plugin_zlibrary_assistant（OMSociety，MIT）。LLM 可自动调用 zlib_search_books / zlib_download_book / zlib_get_status 三个工具，也支持 /搜书、/额度 命令。",
+  "author": {
+    "name": "OMSociety",
+    "url": "https://github.com/OMSociety/astrbot_plugin_zlibrary_assistant"
+  },
+  "license": "MIT",
+  "urls": {
+    "repository": "https://github.com/WOcao0/maibot_zlibrary_assistant"
+  },
+  "host_application": {
+    "min_version": "1.2.0",
+    "max_version": "1.99.99"
+  },
+  "sdk": {
+    "min_version": "2.8.0",
+    "max_version": "2.99.99"
+  },
+  "dependencies": [
+    { "type": "python_package", "name": "aiohttp", "version_spec": ">=3.9.0" },
+    { "type": "python_package", "name": "aiohttp-socks", "version_spec": ">=0.9.0" },
+    { "type": "python_package", "name": "aiofiles", "version_spec": ">=23.0.0" },
+    { "type": "python_package", "name": "Pillow", "version_spec": ">=9.0.0" }
+  ],
+  "plugin_type": "integration",
+  "capabilities": [
+    "send.text",
+    "send.image",
+    "render.html2png",
+    "files.upload",
+    "files.send"
+  ],
+  "i18n": {
+    "default_locale": "zh-CN"
+  }
+}
