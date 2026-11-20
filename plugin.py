@@ -344,6 +344,7 @@ class ZLibraryAssistantPlugin(MaiBotPlugin):
                 default="",
             ),
         ],
+        timeout_ms=180000,
     )
     async def handle_search(
         self,
@@ -419,6 +420,7 @@ class ZLibraryAssistantPlugin(MaiBotPlugin):
                 required=True,
             ),
         ],
+        timeout_ms=900000,
     )
     async def handle_download(self, book_id: int = 0, **kwargs: Any) -> dict[str, Any]:
         """LLM 工具：按 id 下载书籍，保存到插件数据目录并尝试发送给用户。"""
